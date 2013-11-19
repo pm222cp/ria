@@ -4,7 +4,7 @@ define(['backbone'], function(Backbone){
 
 		initialize: function (){
 
-			console.log("Hello World");
+			$('#testDiv').append('Hello World!');
 		}
 	});
 
