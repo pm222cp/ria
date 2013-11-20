@@ -1,18 +1,20 @@
 require.config({
 
+	//Prevent caching for development
 	urlArgs: "bust=" +(new Date()).getTime(),
 
 	paths: {
 
 		"jquery": "libraries/jquery",
 		"backbone": "libraries/backbone",
-		"underscore": "libraries/underscore"
+		"underscore": "libraries/underscore",
+		"text": "libraries/text"
 	}
 
 });
 
-require(['scripts/views/helloworld'], function(SayHello){
+require(['backbone', 'scripts/router'], function(Backbone, Router){
 
-	new SayHello();
-
+	new Router();
+	Backbone.history.start();
 });

@@ -1,4 +1,4 @@
-define(['backbone', 'text!scripts/templates/hello_template.html'], function(Backbone, Template){
+define(['backbone', 'text!scripts/templates/say_good_bye_template.html'], function(Backbone, Template){
 
 	var app = Backbone.View.extend({
 
@@ -14,7 +14,7 @@ define(['backbone', 'text!scripts/templates/hello_template.html'], function(Back
 		render: function(){
 
 			this.$el.html(this.template({
-				sayHello: "Hello World"
+				sayGoodBye: "Hej då"
 			}));
 
 		}
