@@ -14,7 +14,7 @@ define(['backbone', 'text!scripts/templates/say_good_bye_template.html'], functi
 		render: function(){
 
 			this.$el.html(this.template({
-				sayGoodBye: "Hej då"
+				sayGoodBye: "Good bye world!"
 			}));
 
 		}
