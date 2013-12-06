@@ -1,25 +1,21 @@
-define(['backbone', 'scripts/views/helloworld', 'scripts/views/saygoodbye'], function(Backbone, SayHello, SayGoodBye){
+define(['backbone', 'scripts/views/topmenu', 'scripts/views/saygoodbye'], function(Backbone, TopMenu, SayGoodBye){
 
 	var Router = Backbone.Router.extend({
 
 		routes: {
 
-
-			"": "home",
+			"": "startUp",
 			"other": "other"
-
 		},
 
-		home: function(){
+		startUp: function(){
 
-			new SayHello();
+			new TopMenu();
 		},
 
 		other: function(){
 
 			new SayGoodBye();
-
-
 		}
 	});
 

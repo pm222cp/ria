@@ -1,0 +1,22 @@
+#topMenu{
+
+	height:20px;
+	background-color: red;
+	width: 100%;
+	text-align: center;
+}
+
+.horisontalMenu{
+
+	width: 100%;
+	float:left;
+	margin: 2px auto;
+	list-style-type: none;
+}
+
+.horisontalMenu li{
+
+	display: inline;
+	margin-left: 10%;
+	margin-right: 10%;
+}
