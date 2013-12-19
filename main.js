@@ -6,10 +6,10 @@ require.config({
 	paths: {
 
 		"jquery": "libraries/jquery",
-		"backbone": "libraries/backbone",
 		"underscore": "libraries/underscore",
+		"backbone": "libraries/backbone",
 		"text": "libraries/text",
-		"localstorage": "libraries/localstorage"
+		"localstorage": "libraries/backbone.localStorage"
 	}
 
 });

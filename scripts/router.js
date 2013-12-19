@@ -1,21 +1,35 @@
-define(['backbone', 'scripts/views/topmenu', 'scripts/views/saygoodbye'], function(Backbone, TopMenu, SayGoodBye){
+define(['backbone',
+		'scripts/views/topmenu',
+		'scripts/views/recipesview',
+		'scripts/models/recipemodel',
+		'scripts/collections/recipecollection'], function(Backbone, TopMenu, RecipesView, RecipeModel, RecipeCollection){
 
 	var Router = Backbone.Router.extend({
 
 		routes: {
 
-			"": "startUp",
+			"": "start",
 			"other": "other"
 		},
 
-		startUp: function(){
+		initialize: function(){
 
 			new TopMenu();
+
+			var recipes = new RecipeCollection();
+
+			recipes.fetch({
+				success: function(recipes){
+
+					new RecipesView({collection: recipes});
+				}
+			});
+
 		},
 
-		other: function(){
+		start: function(){
 
-			new SayGoodBye();
+
 		}
 	});
 
