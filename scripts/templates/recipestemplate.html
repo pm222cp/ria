@@ -1,5 +1,15 @@
 <div id="recipes">
 	<ul class="recipesList">
 
+		<% _.each(recipes, function(recipe) { console.log("Loopar i template", recipe);%>
+
+		<li>
+			<h1><%= recipe.attributes.name %></h1>
+			</a>
+		</li>
+
+	<% }); %>
+
+
 	</ul>
 </div>

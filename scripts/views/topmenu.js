@@ -1,8 +1,6 @@
-define(['backbone', 'text!scripts/templates/topmenu.html'], function(Backbone, Template){
+define(['jquery', 'underscore', 'backbone', 'text!scripts/templates/topmenu.html'], function($, _, Backbone, Template){
 
 	var topMenu = Backbone.View.extend({
-
-		el: '#appView',
 
 		template: _.template(Template),
 

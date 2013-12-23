@@ -1,8 +1,9 @@
-define(['backbone',
+define(['underscore',
+		'jquery',
+		'backbone',
 		'scripts/views/topmenu',
 		'scripts/views/recipesview',
-		'scripts/models/recipemodel',
-		'scripts/collections/recipecollection'], function(Backbone, TopMenu, RecipesView, RecipeModel, RecipeCollection){
+		'scripts/collections/recipecollection'], function(_,$,Backbone, TopMenu, RecipesView, RecipeCollection){
 
 	var Router = Backbone.Router.extend({
 
@@ -14,20 +15,22 @@ define(['backbone',
 
 		initialize: function(){
 
-			new TopMenu();
+			new TopMenu({el:"#appView"});
+		},
+
+		start: function(){
 
 			var recipes = new RecipeCollection();
 
 			recipes.fetch({
-				success: function(recipes){
 
-					new RecipesView({collection: recipes});
+				success: function(data){
+
+					console.log("RECEPT", data);
+					var view = new RecipesView({el:"#appView", collection: data});
+					view.render();
 				}
 			});
-
-		},
-
-		start: function(){
 
 
 		}

@@ -1,4 +1,4 @@
-define(['backbone'], function(Backbone){
+define(['underscore','backbone'], function(_,Backbone){
 
 	var Recipe = Backbone.Model.extend({
 		defaults: {

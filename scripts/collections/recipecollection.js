@@ -1,4 +1,4 @@
-define(['backbone', 'localstorage', '../models/recipemodel'], function(Backbone, Recipe){
+define(['underscore', 'backbone', '../models/recipemodel'], function(_,Backbone, Recipe){
 
 	var RecipeCollection = Backbone.Collection.extend({
 		model: Recipe,
@@ -6,7 +6,7 @@ define(['backbone', 'localstorage', '../models/recipemodel'], function(Backbone,
 
 		initialize: function (){
 
-			console.log("Skapat något i localstorage?");
+
 		}
 	});
 

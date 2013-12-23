@@ -1,20 +1,23 @@
-define(['backbone', 'text!scripts/templates/recipestemplate.html'], function(Backbone, Template){
+define(['jquery','underscore','backbone', 'text!scripts/templates/recipestemplate.html'], function($, _, Backbone, Template){
 
 	var recipesList = Backbone.View.extend({
 
-		el: '#appView',
+		id: "mainContent",
 
 		template: _.template(Template),
 
 		initialize: function (){
 
-			this.render();
+			console.log("recipesview körs");
 		},
 
-		render: function(){
+		render: function(recipes){
 
-		$(this.el).append(this.template());
-        return this;
+			this.$el.append(this.template({
+				recipes: this.collection.models
+			}));
+			return this;
+
 
 		}
 	});
